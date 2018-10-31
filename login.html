@@ -11,18 +11,40 @@
     <title>Transavia | Login</title>
 </head>
 
-<body>
-    <nav>
-        <ul>
-           <a href="index.html"><img src="img/transavialogo.png"></a>
-            <i class="fas fa-bars"></i>
-            <a href="login.html"><i class="fas fa-user-circle"></i></a>
-        </ul>
-    </nav>
-    <main>
+<body id="img-fix">
+  <nav>
+    <ul>
+      <li>
+        <a href="index.html">
+          <img src="img/transavialogo.png" alt="transavia logo">
+
+        </a>
+      </li>
+      <li>
+        <a href="boekenlijst.html">
+        <i class="fas fa-book"></i>
+        <a href="boekenlijst.html" class="show">
+          Boekenlijst
+        </a>
+        </a>
+      </li>
+      <li>
+        <a href="login.html">
+          <i class="fas fa-user-circle"></i>
+          <a href="login.html" class="show">
+            Login
+          </a>
+        </a>
+      </li>
+    </ul>
+  </nav>
+    <section>
+      <h1>Login</h1>
+    </section>
+    <main class="main-login">
+
         <section>
-            <img class="img-header" src="img/transaviaheader.png">
-            <form action="#">
+            <form action="#" class="login-form">
                 <fieldset>
                     <legend>Login</legend>
                     <label for="name">Gebruikersnaam</label>
