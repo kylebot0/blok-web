@@ -1,19 +1,22 @@
-var search = document.querySelector(".search-form button");
-var star = document.querySelector("div i");
-var toggleBoolean = false;
+var searchButton = document.querySelector("form button");
+
+var favoriteButton = document.querySelectorAll("section div article button");
+var favoriteBoekenlijst = document.querySelector("nav ul li a:nth-child(2)");
+var favoriteBoekenlijstMobile = document.querySelector("nav ul li a:nth-child(1) i");
+
+function search() {
+  window.location="detailpagina.html";
+}
+
+function favorite(current) {
+    current.currentTarget.classList.toggle("favorite-clicked");
+    favoriteBoekenlijst.classList.toggle("hidden1")
+    favoriteBoekenlijstMobile.classList.toggle("hidden1")
+}
+
+for (var i = 0; i < favoriteButton.length; i++) {
+    favoriteButton[i].addEventListener("click", favorite);
+}
 
 
-
-search.addEventListener("click", function() {
-  location.href = "index_search.html";
-});
-
-star.addEventListener("click", function() {
-if (toggleBoolean === false){
-star.classList.add("favorite");
-toggleBoolean = !toggleBoolean;
-} else {
-star.classList.remove("favorite");
-toggleBoolean = !toggleBoolean;
-};
-});
+searchButton.addEventListener("click", search);

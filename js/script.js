@@ -2,7 +2,7 @@ var navHide = document.getElementById("nav-btn");
 var li = document.querySelectorAll("li");
 var img = document.querySelector("img");
 var header = document.querySelector("nav");
-var button = document.querySelector("button");
+var button = document.querySelector("#nav-btn");
 var toggleBoolean = false;
 
 navHide.addEventListener("click", function() {
@@ -11,7 +11,7 @@ navHide.addEventListener("click", function() {
     button.classList.add("nav-btn-hidden");
     li[1].classList.add("hide");
     li[2].classList.add("hide");
-    li[3].classList.add("hide");
+
     img.classList.add("hide");
     button.classList.add("rotate");
     toggleBoolean = !toggleBoolean;
@@ -20,7 +20,7 @@ navHide.addEventListener("click", function() {
     button.classList.remove("nav-btn-hidden");
     li[1].classList.remove("hide");
     li[2].classList.remove("hide");
-    li[3].classList.remove("hide");
+
     img.classList.remove("hide");
     button.classList.remove("rotate");
     toggleBoolean = !toggleBoolean;
